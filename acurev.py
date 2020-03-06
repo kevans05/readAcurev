@@ -9,7 +9,6 @@ instrument = minimalmodbus.Instrument('/dev/ttyUSB0', 1)
 
 while True:
     # Register number, number of decimals, function code
-    meter = instrument.read_register(03, 03, 4)
-    instrument.read_register(17,1,9006)
+    meter = instrument.read_register(17)
     print (meter)
     time.sleep(1)
